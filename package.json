@@ -1,0 +1,23 @@
+{
+  "name": "hinstock-hotel-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "pretty": "npx prettier --config ./utilities/prettier/.prettierrc --ignore-path ./utilities/prettier/.prettierignore --write ./",
+    "start": "parcel serve ./pages/index.html -p 3001 --open",
+    "build": "rm -r docs && parcel build ./pages/index.html --dist-dir docs --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "parcel": "^2.14.0",
+    "prettier": "3.5.3"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
+}
